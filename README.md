@@ -19,5 +19,19 @@ checkMemberList is the library helper check data in slice
 
 `checkMemberList.Float64In([]Float64, Float64)` // check float64 in []float64
 
-# Exemple
-<script src="https://gist.github.com/SubAlgo/37e58e151f1d4d7d34d7b1e599a1c101.js"></script>
+# Example
+package main
+
+import (  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"fmt"  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"github.com/subalgo/checkMemberList"  
+)
+
+func main() {  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;var mySlice = []string{"apple", "banana"}  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res := checkMemberList.StringIn(mySlice, "banana")  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println(res) // true
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;res2 := checkMemberList.StringIn(mySlice, "mango")  
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;fmt.Println(res2) // false  
+}
